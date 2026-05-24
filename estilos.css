@@ -1,0 +1,558 @@
+/* ===== Encabezado Pastel ===== */
+.encabezado {
+    background-color: #f2c7d7; /* rosa pastel sólido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1000; /* menú siempre por encima */
+    
+}
+.encabezado a,
+.encabezado h1,
+.encabezado span {
+    color: #3a1f2f;       /* tono vino oscuro, combina con rosa y contrasta */
+    font-weight: 700;     /* más grueso */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4); /* le da definición */
+}
+
+.encabezado a:hover {
+    color: #ffffff;       /* al pasar el mouse, se pone blanco */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    
+}
+
+.titulo h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: #d89a4a; /* dorado suave */
+    margin: 0;
+}
+
+.titulo p {
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ===== Menú ===== */
+.menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #d89a4a;
+}
+/* ===== Portada (Hero Section) ===== */
+.portada {
+   background-image: url("img/portada-belleza.jpg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh; /* ocupa toda la altura de la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Capa de color pastel semitransparente encima */
+.portada::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(249, 227, 232, 0.7); /* rosado pastel con transparencia */
+}
+
+/* Contenido centrado */
+.contenido-portada {
+    position: relative;
+    text-align: center;
+    color: #5a3b36;
+    max-width: 600px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.contenido-portada h2 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3rem;
+    color: #d89a4a;
+    margin-bottom: 10px;
+}
+
+.contenido-portada p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Botón principal */
+.boton {
+    background-color: #d89a4a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: #c4873d;
+}
+
+/* ===== Estilos Generales  Galleria ===== */
+
+
+.pagina-servicios {
+    padding: 40px;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 2.5rem;
+    color: #d89a4a;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Rejilla de tarjetas */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas */
+.servicio {
+    background-color: #fdf1f4; /* rosado pastel */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    min-height: 360px;
+}
+
+.servicio:hover {
+    transform: translateY(-6px);
+}
+
+/* Imagen del servicio */
+.servicio img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Texto */
+.servicio h3 {
+    margin-top: 15px;
+    color: #7a4d63;
+    font-size: 1.4rem;
+}
+
+.servicio p {
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+/* Botón */
+.btn-servicio {
+    display: inline-block;
+    background-color: #d89a4a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-servicio:hover {
+    background-color: #c4873d;
+}
+
+/* ======== Página galeria  ======== */
+
+.pagina-galeria {
+    padding: 40px;
+    text-align: center;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.foto {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.foto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s;
+    border-radius: 15px;
+}
+
+.foto img:hover {
+    transform: scale(1.08);
+    
+}
+
+/* ======== Página contacto ======== */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; /* Verde característico de WhatsApp */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background-color 0.3s;
+    margin-top: 20px;
+}
+.btn-whatsapp:hover {
+    background-color: #1ebe5b; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* ===== Botón flotante de WhatsApp ===== */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-flotante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.whatsapp-flotante:hover img {
+    transform: scale(1.1);
+}
+
+/* ======== Contacto ======== */
+
+.pagina-contacto,
+.pagina-citas {
+    padding: 40px;
+    text-align: center;
+}
+
+.contacto-whatsapp {
+    margin-bottom: 25px;
+}
+
+.btn-whatsapp-int {
+    background-color: #25d366;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.btn-whatsapp-int:hover {
+    transform: scale(1.05);
+}
+
+.info-contacto {
+    margin: 25px auto;
+    font-size: 18px;
+    color: #4a3f44;
+    line-height: 28px;
+}
+
+.mapa {
+    margin: 30px auto;
+    max-width: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Formulario */
+.form-contacto {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 14px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 10px;
+    border: 3px solid #d8b5c2;
+    background: #fff8fa;
+    font-size: 16px;
+}
+
+.form-contacto button {
+    background-color: #d89a4a;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.form-contacto button:hover {
+    background-color: #c5873d;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #f7dfe8; 
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #e0bccc;
+}
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logo h3 {
+    color: #a46d88;
+    font-size: 22px;
+    margin: 0;
+}
+
+.footer-logo p {
+    color: #6f5464;
+    margin: 0;
+}
+
+.footer-info p {
+    margin: 3px 0;
+    color: #6a5b63;
+}
+
+.footer-redes a {
+    margin: 0 10px;
+    color: #b06d62;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-redes a:hover {
+    color: #d89a4a;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #7a6a72;
+}
+
+/* ===== Estilos Responsivos ===== */
+@media (min-width: 700px) {
+    .footer-contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* ===== RESPONSIVE PARA CELULARES====== */
+
+@media (max-width: 768px) {
+
+    /* Encabezado */
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .encabezado a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    /* Portada */
+    .portada {
+        height: 60vh; /* más pequeña en celular */
+        padding: 20px;
+    }
+
+    .contenido-portada h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenido-portada p {
+        font-size: 1rem;
+    }
+
+    /* Servicios o secciones con columnas */
+    .contenedor-cards {
+        display: grid;
+        grid-template-columns: 1fr; /* una columna en celular */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* Galería */
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 por fila */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .galeria img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Contacto */
+    form {
+        width: 95%;
+        margin: auto;
+    }
+}
+ .div-formularios-contacto {
+    background-color: #e8d5d2 ;
+    padding: 15px;
+   
+    border-radius: 100px;
+ }
+ .precio{
+    background-color: rgb(232, 171, 237);
+    margin-left: 90px;
+    margin-right:90px ;
+    border-radius: 300px;
+    margin-top: 15px;
+ }
+ .logo img:hover{
+    transform: scale(1.08);
+ }
+
+.ragistro-fecha-nacimiento{
+    margin-top: 5px;
+    padding: auto;
+    text-align: center;
+}
+.detalle-pedido {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+}
+
+.btn-volver {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
