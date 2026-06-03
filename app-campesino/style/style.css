@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f5;
+}
+
+header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card span {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #2e7d32;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.detalle {
+    padding: 20px;
+}
+
+.detalle h2 {
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.precio {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.secundario {
+    background: #cccccc;
+    color: #333;
+    margin-top: 10px;
+}
+.carrito {
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
